@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- html5-qrcodeのライブラリ読み込み -->
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>レシートリマインダー</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📷 レシートリマインダー</h1>
+
+    <button id="scanBtn">📸 QRコードを読み取る</button>
+    <!-- QRコード読み取りエリア -->
+  <div id="reader" style="width: 300px; margin: auto;"></div>
+
+<div class="voice">
+  <p>🎤 音声メモ（任意）</p>
+  <div class="voice-buttons">
+    <button id="startVoice">録音スタート</button>
+    <button id="stopVoice">ストップ</button>
+  </div>
+  <p id="voiceResult">ここにメモが表示されるよ〜</p>
+</div>
+
+    <div class="info">
+      <p>📍 現在地：<span id="location">取得中...</span></p>
+      <p>🕒 時刻：<span id="timestamp">取得中...</span></p>
+    </div>
+
+    <button id="viewRecords">📋 記録一覧を見る</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
